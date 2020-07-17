@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>org.idea.infoc.infoc-gradle-plugin</id>
+    <name>InfoC Plugin</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="mouse_right_action" class="org.idea.infoc.MouseRightAction" text="infoc 自动生成"
+                description="自动生成code">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
+
+
+<!--
+[ id ] 插件id，类似于Android项目的包名，不能和其他插件项目重复，所以推荐使用com.xxx.xxx的格式
+[ name ] 插件名称，别人在官方插件库搜索你的插件时使用的名称
+[ version ] 插件版本号
+[ vendor ] 插件发布者信息，可以添加邮箱链接
+[ description ] 插件描述信息，在这里可以介绍你的插件内容，支持HTML标签
+[ change-notes ] 插件版本变更日志，支持HTML标签
+[ idea-version ] 对IntelliJ IDEA软件支持本插件版本号  分为since-build最低版本 和 until-build最高版本，两个属性可以任选一或者同时使用  官网有详细介绍 www.jetbrains.org/intellij/sd…  大体规则为 since-build <= 支持版本 < until-build
+[ extensions ] 自定义扩展，暂时用不到
+[ actions ] 具体的插件动作，后面会介绍
+-->
