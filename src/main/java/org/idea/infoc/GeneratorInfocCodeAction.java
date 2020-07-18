@@ -107,7 +107,7 @@ public class GeneratorInfocCodeAction extends AnAction {
     private void createFrame() {
         JFrame frame = new JFrame("Auto Generator Infoc Class");
         // Setting the width and height of frame
-        frame.setSize(500, 220);
+        frame.setSize(800, 400);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         Dimension displaySize = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension frameSize = frame.getSize();
@@ -124,22 +124,22 @@ public class GeneratorInfocCodeAction extends AnAction {
 
         // 1
         JLabel pathLabel = new JLabel("Path:");
-        pathLabel.setBounds(10, 20, 80, 25);
+        pathLabel.setBounds(10, 50, 160, 50);
         panel.add(pathLabel);
 
         JTextField pathJText = new JTextField(20);
-        pathJText.setBounds(100, 20, 350, 25);
+        pathJText.setBounds(160, 50, 600, 50);
         if (dir != null) {
             pathJText.setText(dir);
         }
         panel.add(pathJText);
         //2
         JLabel packageLabel = new JLabel("Package:");
-        packageLabel.setBounds(10, 50, 80, 25);
+        packageLabel.setBounds(10, 100, 160, 50);
         panel.add(packageLabel);
 
         JTextField packageJText = new JTextField(20);
-        packageJText.setBounds(100, 50, 350, 25);
+        packageJText.setBounds(160, 100, 600, 50);
         if (packageName != null) {
             packageJText.setText(packageName);
         }
@@ -147,17 +147,17 @@ public class GeneratorInfocCodeAction extends AnAction {
 
         //3
         JLabel configLabel = new JLabel("Config:");
-        configLabel.setBounds(10, 80, 80, 25);
+        configLabel.setBounds(10, 150, 160, 50);
         panel.add(configLabel);
 
         JTextField infocJText = new JTextField(20);
-        infocJText.setBounds(100, 80, 350, 25);
+        infocJText.setBounds(160, 150, 600, 50);
         panel.add(infocJText);
 
 
         //3
         JLabel parentLabel = new JLabel("Parent:");
-        parentLabel.setBounds(10, 110, 80, 25);
+        parentLabel.setBounds(10, 200, 160, 50);
         panel.add(parentLabel);
 
 
@@ -170,12 +170,12 @@ public class GeneratorInfocCodeAction extends AnAction {
 
         parentBox.setModel(new ArrayListComboBoxModel(strings));
 
-        parentBox.setBounds(100, 110, 350, 25);
+        parentBox.setBounds(160, 200, 600, 50);
         panel.add(parentBox);
 
         // generator
         JButton mGeneratorButton = new JButton("Generator");
-        mGeneratorButton.setBounds(10, 140, 80, 25);
+        mGeneratorButton.setBounds(10, 260, 160, 50);
         panel.add(mGeneratorButton);
 
         mGeneratorButton.addActionListener(new ActionListener() {
@@ -211,7 +211,7 @@ public class GeneratorInfocCodeAction extends AnAction {
         });
 
         JButton mCloseButton = new JButton("Close");
-        mCloseButton.setBounds(120, 140, 80, 25);
+        mCloseButton.setBounds(180, 260, 160, 50);
         panel.add(mCloseButton);
         mCloseButton.addActionListener(new ActionListener() {
             @Override
